@@ -1,7 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravi Raj - Lead Analyst</title>
+    
+    <!-- Importing Inter font for that clean Scandinavian look -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css" rel="stylesheet">
+    
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set up basic variables for consistent styling */
+        :root {
+            --primary-color: #1e1e1e;
+            --background-color: #fdfdfd;
+            --gray-light: #f5f5f5;
+            --gray-medium: #666666;
+            --spacing-unit: 1rem;
+        }
+
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background-color: var(--background-color);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--spacing-unit);
+        }
+
+        /* Header section styling */
+        header {
+            padding: calc(var(--spacing-unit) * 4) 0;
+            border-bottom: 1px solid var(--gray-medium);
+        }
+
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .title {
+            font-size: 1.5rem;
+            color: var(--gray-medium);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        .contact {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-unit);
+        }
+
+        /* Section styling */
+        section {
+            padding: calc(var(--spacing-unit) * 2) 0;
+            border-bottom: 1px solid var(--gray-light);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        /* Experience items styling */
+        .experience-item {
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .company {
+            font-weight: 600;
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .position {
+            color: var(--gray-medium);
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        .duration {
+            font-size: 0.9rem;
+            color: var(--gray-medium);
+            margin-bottom: var(--spacing-unit);
+        }
+
+        /* Skills section styling */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-unit);
+        }
+
+        .skill-category {
+            background-color: var(--gray-light);
+            padding: var(--spacing-unit);
+        }
+
+        .skill-category h3 {
+            margin-bottom: calc(var(--spacing-unit) / 2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .name {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.2rem;
+            }
+
+            section {
+                padding: var(--spacing-unit) 0;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Header section with name and contact information -->
+    <header>
+        <h1 class="name">Ravi Raj</h1>
+        <div class="title">Lead Analyst</div>
+        <div class="contact">
+            Amsterdam, NL | ravi.raj@outlook.in | <a href="https://linkedin.com/in/rvrj">LinkedIn</a>
+        </div>
+    </header>
+
+    <!-- Summary section -->
+    <section>
+        <h2>Summary</h2>
+        <p>Seasoned analytics leader with 9+ years of experience enabling data-driven decision-making in fast-paced environments. Skilled in partnering with stakeholders to understand their goals and challenges, and empowering them with high-impact BI dashboards and self-service data products.</p>
+    </section>
+
+    <!-- Skills section -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Leadership</h3>
+                <p>Stakeholder Management, Data Strategy, Mentoring & Coaching, Team Leadership</p>
+            </div>
+            <div class="skill-category">
+                <h3>Data Analysis & ETL</h3>
+                <p>SQL, R, Python, Airflow, dbt</p>
+            </div>
+            <div class="skill-category">
+                <h3>Business Intelligence</h3>
+                <p>Tableau, Looker Studio, Qlik Sense</p>
+            </div>
+            <div class="skill-category">
+                <h3>Soft Skills</h3>
+                <p>Effective Communication, Design Thinking, Creative Problem Solving</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience section -->
+    <section>
+        <h2>Experience</h2>
+        
+        <div class="experience-item">
+            <div class="company">Just Eat Takeaway.com</div>
+            <div class="position">Lead Analyst</div>
+            <div class="duration">November 2023 - Present</div>
+            <ul>
+                <li>Delivered an intuitive and data-driven business performance management solution</li>
+                <li>Developed a self-service analytics solution replacing 20+ dashboards</li>
+                <li>Optimized legacy data pipelines, reducing platform costs by over 60%</li>
+                <li>Led the migration of 100+ data products from AWS to GCP</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="company">Novartis</div>
+            <div class="position">Analytics Manager</div>
+            <div class="duration">June 2019 - October 2021</div>
+            <ul>
+                <li>Designed and delivered a data product serving 5,500+ global users</li>
+                <li>Developed data quality monitoring solution reducing issues by 35%</li>
+                <li>Automated processes saving 1,800+ hours annually</li>
+                <li>Mentored 11 junior analysts in technical skills and insight delivery</li>
+            </ul>
+        </div>
+
+        <div class="experience-item">
+            <div class="company">1Channel</div>
+            <div class="position">Manager & Business Analyst</div>
+            <div class="duration">August 2015 - June 2019</div>
+            <ul>
+                <li>Developed 40+ BI dashboards for actionable insights</li>
+                <li>Optimized data pipelines improving performance by 30%</li>
+                <li>Led a team of 17 FTEs in developing customer-centric solutions</li>
+                <li>Designed responsive dashboard templates for mobile-ready analytics</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education section -->
+    <section>
+        <h2>Education</h2>
+        <div class="experience-item">
+            <div class="company">Dr. A.P.J. Abdul Kalam Technical University</div>
+            <div class="position">Bachelor of Technology</div>
+            <div class="duration">2011 - 2015</div>
+            <p>Major: Electronics and Communication Engineering</p>
+        </div>
+    </section>
 </body>
 </html>
