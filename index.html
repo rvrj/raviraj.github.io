@@ -109,29 +109,52 @@
             margin-bottom: var(--spacing-unit);
         }
 
-        /* Skills section styling */
-        .skills-list {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-unit);
+        /* Styling for Professional Journey section */
+        .experience-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: calc(var(--spacing-unit) * 2);
+            margin-top: calc(var(--spacing-unit) * 2);
         }
-
-        .skill-card {
+    
+        .experience-card {
             background-color: var(--gray-light);
-            padding: calc(var(--spacing-unit) * 1.5);
+            padding: calc(var(--spacing-unit) * 2);
             border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
         }
     
-        .skill-card h3 {
-            font-size: 1.25rem;
+        .experience-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
+            color: var(--primary-color);
         }
     
-        .skill-card p {
+        .position {
+            font-size: 1rem;
+            font-weight: 500;
             color: var(--gray-medium);
         }
-
+    
+        .duration {
+            font-size: 0.9rem;
+            color: var(--gray-medium);
+            margin-bottom: 1rem;
+        }
+    
+        .experience-card ul {
+            list-style: disc;
+            padding-left: 1.5rem;
+            color: var(--primary-color);
+        }
+    
+        .experience-card ul li {
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+    </style>
+    
         /* Responsive design */
         @media (max-width: 600px) {
             .name {
@@ -187,21 +210,51 @@
     </div>
     </section>
 
-    <!-- Experience section -->
-    <section>
-        <h2>Professional Journey</h2>
-        <div class="experience-item">
-            <div class="company">Just Eat Takeaway.com</div>
-            <div class="position">Lead Analyst</div>
-            <div class="duration">November 2023 - Present</div>
+    <!-- Professional Journey section -->
+<section>
+    <h2>Professional Journey</h2>
+    <div class="experience-cards">
+
+        <!-- Experience Card 1: Just Eat Takeaway -->
+        <div class="experience-card">
+            <h3>Just Eat Takeaway.com</h3>
+            <p class="position">Lead Analyst</p>
+            <p class="duration">November 2023 - Present</p>
             <ul>
-                <li>Led the development of a centralized business performance solution that increased user engagement by 30%</li>
-                <li>Optimized data pipelines, reducing platform costs by over 60%</li>
+                <li>Designed and deployed a comprehensive business performance management system that enabled real-time insights into key metrics, empowering executives and teams with actionable data for more informed decision-making.</li>
+                <li>Developed an innovative self-service analytics solution by consolidating over 20 dashboards into a single, user-friendly platform, increasing accessibility to data insights across departments and significantly reducing analysis time for end users.</li>
+                <li>Redesigned and optimized legacy data pipelines, which cut platform costs by over 60%, streamlined data processing, and improved system efficiency, enhancing the overall data ecosystem’s scalability and reliability.</li>
+                <li>Successfully led the migration of more than 100 data products from AWS to Google Cloud Platform (GCP), ensuring minimal downtime and seamless integration with the existing infrastructure, which contributed to cost savings and operational agility.</li>
             </ul>
         </div>
 
-        <!-- Add other experience items similarly -->
+        <!-- Experience Card 2: Novartis -->
+        <div class="experience-card">
+            <h3>Novartis</h3>
+            <p class="position">Analytics Manager</p>
+            <p class="duration">June 2019 - October 2021</p>
+            <ul>
+                <li>Created a data product that catered to over 5,500 global users, providing a robust platform for data exploration and insights generation, and supporting diverse business functions in making data-driven decisions.</li>
+                <li>Designed a data quality monitoring solution that identified and resolved data inconsistencies, leading to a 35% reduction in data quality issues and enhancing the reliability of analytics outputs for stakeholders across the organization.</li>
+                <li>Automated critical business processes, leading to an annual time savings of over 1,800 hours and enabling teams to reallocate resources towards high-impact strategic initiatives.</li>
+                <li>Mentored 11 junior analysts, focusing on developing their technical expertise in data analysis and storytelling, improving their capability to deliver insightful analyses and engage effectively with stakeholders.</li>
+            </ul>
+        </div>
 
+        <!-- Experience Card 3: 1Channel -->
+        <div class="experience-card">
+            <h3>1Channel</h3>
+            <p class="position">Manager & Business Analyst</p>
+            <p class="duration">August 2015 - June 2019</p>
+            <ul>
+                <li>Developed over 40 business intelligence dashboards tailored to client needs, transforming complex data into clear visual insights that informed decision-making for brands and helped optimize their salesforce activities.</li>
+                <li>Enhanced data pipelines to improve performance by 30%, ensuring faster data access and processing, which streamlined reporting processes and provided clients with timely insights.</li>
+                <li>Led a team of 17 full-time employees, overseeing the development and delivery of customer-centric analytics solutions that enabled clients to achieve their digital transformation goals and improve data-driven decision-making capabilities.</li>
+                <li>Designed mobile-responsive dashboard templates, allowing users to access key insights on-the-go and expanding the usability of analytics tools for sales and operational teams in field environments.</li>
+            </ul>
+        </div>
+    
+        </div>
     </section>
 
     <!-- Education section -->
