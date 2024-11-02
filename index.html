@@ -110,23 +110,26 @@
         }
 
         /* Skills section styling */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: var(--spacing-unit);
+        .skills-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-unit);
         }
 
-        .skill-category {
+        .skill-card {
             background-color: var(--gray-light);
-            padding: var(--spacing-unit);
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: calc(var(--spacing-unit) * 1.5);
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
         }
-
-        .skill-category h3 {
-            margin-bottom: calc(var(--spacing-unit) / 2);
-            font-weight: 600;
-            color: var(--primary-color);
+    
+        .skill-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        .skill-card p {
+            color: var(--gray-medium);
         }
 
         /* Responsive design */
@@ -163,25 +166,25 @@
 
     <!-- Skills section -->
     <section>
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Leadership</h3>
-                <p>Stakeholder Management, Data Strategy, Mentoring & Coaching, Team Leadership</p>
-            </div>
-            <div class="skill-category">
-                <h3>Data Analysis & ETL</h3>
-                <p>SQL, R, Python, Airflow, dbt</p>
-            </div>
-            <div class="skill-category">
-                <h3>Business Intelligence</h3>
-                <p>Tableau, Looker Studio, Qlik Sense</p>
-            </div>
-            <div class="skill-category">
-                <h3>Soft Skills</h3>
-                <p>Effective Communication, Design Thinking, Creative Problem Solving</p>
-            </div>
+    <h2>Skills</h2>
+    <div class="skills-list">
+        <div class="skill-card">
+            <h3>Leadership</h3>
+            <p>Stakeholder Management, Data Strategy, Mentoring & Coaching, Team Leadership</p>
         </div>
+        <div class="skill-card">
+            <h3>Data Analysis & ETL</h3>
+            <p>SQL, R, Python, Airflow, dbt</p>
+        </div>
+        <div class="skill-card">
+            <h3>Business Intelligence</h3>
+            <p>Tableau, Looker Studio, Qlik Sense</p>
+        </div>
+        <div class="skill-card">
+            <h3>Soft Skills</h3>
+            <p>Effective Communication, Design Thinking, Creative Problem Solving</p>
+        </div>
+    </div>
     </section>
 
     <!-- Experience section -->
