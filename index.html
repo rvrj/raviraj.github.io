@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravi Raj - Lead Analyst</title>
+    <title>Ravi Raj - Lead Data Analyst</title>
     
     <!-- Importing Inter font for that clean Scandinavian look -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css" rel="stylesheet">
@@ -19,6 +19,7 @@
         /* Set up basic variables for consistent styling */
         :root {
             --primary-color: #1e1e1e;
+            --accent-color: #0073e6; /* A subtle blue for accent */
             --background-color: #fdfdfd;
             --gray-light: #f5f5f5;
             --gray-medium: #666666;
@@ -38,41 +39,58 @@
 
         /* Header section styling */
         header {
+            text-align: center;
             padding: calc(var(--spacing-unit) * 4) 0;
             border-bottom: 1px solid var(--gray-medium);
         }
 
         .name {
             font-size: 2.5rem;
-            font-weight: 700;
+            font-weight: 800;
+            color: var(--primary-color);
             margin-bottom: var(--spacing-unit);
         }
 
         .title {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: var(--gray-medium);
             margin-bottom: var(--spacing-unit);
         }
 
         .contact {
             font-size: 1rem;
+            color: var(--accent-color);
             margin-bottom: var(--spacing-unit);
+        }
+
+        .contact a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
         }
 
         /* Section styling */
         section {
             padding: calc(var(--spacing-unit) * 2) 0;
             border-bottom: 1px solid var(--gray-light);
+            margin-bottom: var(--spacing-unit);
         }
 
         h2 {
             font-size: 1.5rem;
-            margin-bottom: calc(var(--spacing-unit) * 2);
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
+            border-left: 4px solid var(--accent-color);
+            padding-left: var(--spacing-unit);
         }
 
         /* Experience items styling */
         .experience-item {
-            margin-bottom: calc(var(--spacing-unit) * 2);
+            margin-bottom: calc(var(--spacing-unit) * 1.5);
         }
 
         .company {
@@ -101,10 +119,14 @@
         .skill-category {
             background-color: var(--gray-light);
             padding: var(--spacing-unit);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
         }
 
         .skill-category h3 {
             margin-bottom: calc(var(--spacing-unit) / 2);
+            font-weight: 600;
+            color: var(--primary-color);
         }
 
         /* Responsive design */
@@ -127,16 +149,16 @@
     <!-- Header section with name and contact information -->
     <header>
         <h1 class="name">Ravi Raj</h1>
-        <div class="title">Lead Analyst</div>
+        <div class="title">Lead Data Analyst</div>
         <div class="contact">
-            Amsterdam, NL | ravi.raj@outlook.in | <a href="https://linkedin.com/in/rvrj">LinkedIn</a>
+            Amsterdam, NL | <a href="mailto:ravi.raj@outlook.in">ravi.raj@outlook.in</a> | <a href="https://linkedin.com/in/rvrj">LinkedIn</a>
         </div>
     </header>
 
     <!-- Summary section -->
     <section>
-        <h2>Summary</h2>
-        <p>Seasoned analytics leader with 9+ years of experience enabling data-driven decision-making in fast-paced environments. Skilled in partnering with stakeholders to understand their goals and challenges, and empowering them with high-impact BI dashboards and self-service data products.</p>
+        <h2>About Me</h2>
+        <p>Welcome! I'm Ravi, a seasoned data and analytics leader with over nine years of experience empowering teams to make smarter, data-driven decisions. I specialize in developing high-impact BI dashboards and self-service data products that make insights accessible for everyone. Let's collaborate to turn data into actionable strategies!</p>
     </section>
 
     <!-- Skills section -->
@@ -164,43 +186,19 @@
 
     <!-- Experience section -->
     <section>
-        <h2>Experience</h2>
-        
+        <h2>Professional Journey</h2>
         <div class="experience-item">
             <div class="company">Just Eat Takeaway.com</div>
             <div class="position">Lead Analyst</div>
             <div class="duration">November 2023 - Present</div>
             <ul>
-                <li>Delivered an intuitive and data-driven business performance management solution</li>
-                <li>Developed a self-service analytics solution replacing 20+ dashboards</li>
-                <li>Optimized legacy data pipelines, reducing platform costs by over 60%</li>
-                <li>Led the migration of 100+ data products from AWS to GCP</li>
+                <li>Led the development of a centralized business performance solution that increased user engagement by 30%</li>
+                <li>Optimized data pipelines, reducing platform costs by over 60%</li>
             </ul>
         </div>
 
-        <div class="experience-item">
-            <div class="company">Novartis</div>
-            <div class="position">Analytics Manager</div>
-            <div class="duration">June 2019 - October 2021</div>
-            <ul>
-                <li>Designed and delivered a data product serving 5,500+ global users</li>
-                <li>Developed data quality monitoring solution reducing issues by 35%</li>
-                <li>Automated processes saving 1,800+ hours annually</li>
-                <li>Mentored 11 junior analysts in technical skills and insight delivery</li>
-            </ul>
-        </div>
+        <!-- Add other experience items similarly -->
 
-        <div class="experience-item">
-            <div class="company">1Channel</div>
-            <div class="position">Manager & Business Analyst</div>
-            <div class="duration">August 2015 - June 2019</div>
-            <ul>
-                <li>Developed 40+ BI dashboards for actionable insights</li>
-                <li>Optimized data pipelines improving performance by 30%</li>
-                <li>Led a team of 17 FTEs in developing customer-centric solutions</li>
-                <li>Designed responsive dashboard templates for mobile-ready analytics</li>
-            </ul>
-        </div>
     </section>
 
     <!-- Education section -->
