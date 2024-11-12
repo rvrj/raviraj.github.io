@@ -11,6 +11,7 @@
     --box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 1);
 }
 
+/* Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,12 +25,29 @@ body {
     background-color: var(--bg-color);
 }
 
+/* Typography */
+h1,
+h2,
+p,
+label {
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: calc(var(--spacing) * 0.8);
+}
+
+/* Layout */
 .container {
     width: 100%;
     padding: var(--spacing);
     padding-bottom: calc(var(--spacing) + var(--sidebar-width));
 }
 
+/* Sidebar */
 #sidebar {
     position: fixed;
     bottom: 0;
@@ -65,27 +83,7 @@ body {
     font-size: 1rem;
 }
 
-.sidebar-nav li a:hover,
-.sidebar-nav li a.active {
-    color: var(--accent-color);
-    transform: translate(-2px, -2px);
-}
-
-@media (min-width: 768px) {
-
-    .sidebar-nav li a:hover,
-    .sidebar-nav li a.active {
-        border-color: white;
-        background-color: var(--accent-color);
-        color: var(--primary-color);
-    }
-
-    .sidebar-nav li a:hover span,
-    .sidebar-nav li a.active span {
-        color: var(--primary-color);
-    }
-}
-
+/* Hero Section */
 .hero {
     background-color: var(--secondary-color);
     color: var(--primary-color);
@@ -130,13 +128,6 @@ body {
     box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
 }
 
-h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: calc(var(--spacing) * 0.8);
-}
-
 .experience-item h3 {
     font-size: 1.3rem;
     font-weight: 800;
@@ -177,11 +168,11 @@ textarea {
     padding: 1rem;
     border: var(--border-thickness) solid white;
     background-color: var(--primary-color);
+    color: var(--text-color);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 1rem;
-    color: var(--primary-color);
 }
 
 input:focus,
@@ -270,4 +261,25 @@ footer {
     .container {
         max-width: 1400px;
     }
+}
+
+/* Form Elements */
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Contact Form */
+#contact-form {
+    color: var(--text-color);
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer text */
+footer p {
+    color: var(--text-color);
 }
