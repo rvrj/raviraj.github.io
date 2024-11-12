@@ -1,20 +1,31 @@
 {
-  "name": "Your Name",
-  "tagline": "Your Role/Tagline",
-  "about": "Your about text here...",
+  "name": "Ravi Raj",
+  "tagline": "Lead Analyst",
+  "about": "I enable smarter, data-driven decision-making💡",
   "experience": [
     {
-      "title": "Job Title",
-      "company": "Company Name",
-      "date": "Date Range",
-      "description": "Description of your role and achievements"
+      "title": "Lead Analyst",
+      "company": "Just Eat Takeaway.com",
+      "date": "2021 - Present",
+      "description": "At Just Eat Takeaway.com, a leading global online food delivery marketplace, I am part of the central data and analytics team. In this role, I collaborate closely with stakeholders to facilitate data-driven decision-making, drive data democratization through effective data models and business intelligence dashboards, and support business performance management by delivering actionable insights.
+Additionally, I lead people-centric initiatives focused on positioning the company as a top employer"
     }
-    // Add more experience items as needed
   ],
   "skills": [
-    "HTML",
-    "CSS",
-    "JavaScript"
-    // Add more skills as needed
-  ]
+    "Stakeholder Management",
+    "Data Strategy",
+    "Mentoring & Coaching",
+    "Team Leadership",
+    "SQL",
+    "R",
+    "Python",
+    "Airflow",
+    "Tableau",
+    "Looker Studio",
+    "Qlik Sense",
+    "Effective Communication",
+    "Design Thinking",
+    "Creative Problem Solving"
+  ],
+  "resumeLink": "/Resume - Ravi Raj.pdf"
 }
