@@ -36,11 +36,37 @@
     "AWS"
   ],
   "navLinks": [
-    {"text": "About", "href": "#about"},
-    {"text": "Experience", "href": "#experience"},
-    {"text": "Skills", "href": "#skills"},
-    {"text": "Contact", "href": "#contact"},
-    {"text": "Download CV", "href": "/path-to-your-cv.pdf", "download": true}
+    {
+      "text": "Home",
+      "href": "#hero",
+      "icon": "fa-house"
+    },
+    {
+      "text": "About",
+      "href": "#about",
+      "icon": "fa-user"
+    },
+    {
+      "text": "Experience",
+      "href": "#experience",
+      "icon": "fa-briefcase"
+    },
+    {
+      "text": "Skills",
+      "href": "#skills",
+      "icon": "fa-code"
+    },
+    {
+      "text": "Contact",
+      "href": "#contact",
+      "icon": "fa-envelope"
+    },
+    {
+      "text": "CV",
+      "href": "/path-to-your-cv.pdf",
+      "icon": "fa-file-arrow-down",
+      "download": true
+    }
   ],
   "footerText": "© 2023 John Doe. All rights reserved."
 }
