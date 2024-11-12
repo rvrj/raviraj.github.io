@@ -1,66 +1,80 @@
-document.addEventListener('DOMContentLoaded', async () => {
+async function fetchContent() {
     try {
         const response = await fetch('content.json');
         const data = await response.json();
 
-        // Populate hero section
-        document.getElementById('name').textContent = data.name;
-        document.getElementById('title').textContent = data.title;
+        // Render hero section
+        document.querySelector('.hero h1').textContent = data.name;
+        document.querySelector('.hero p').textContent = data.tagline;
 
-        // Populate about section
-        document.getElementById('about-content').textContent = data.about;
+        // Render about section
+        const aboutSection = document.createElement('section');
+        aboutSection.className = 'card';
+        aboutSection.id = 'about';
+        aboutSection.innerHTML = `
+            <h2>About Me</h2>
+            <p>${data.about}</p>
+        `;
+        document.querySelector('.container').appendChild(aboutSection);
 
-        // Populate experience section
-        const experienceContainer = document.getElementById('experience-items');
-        data.experience.forEach(job => {
-            const jobElement = document.createElement('div');
-            jobElement.className = 'experience-item card';
-            jobElement.innerHTML = `
-                <h3>${job.title} @ ${job.company}</h3>
-                <p>${job.period}</p>
-                <ul>
-                    ${job.responsibilities.map(resp => `<li>${resp}</li>`).join('')}
-                </ul>
-            `;
-            experienceContainer.appendChild(jobElement);
-        });
+        // Render experience section
+        const experienceSection = document.createElement('section');
+        experienceSection.className = 'card';
+        experienceSection.id = 'experience';
+        experienceSection.innerHTML = `
+            <h2>Experience</h2>
+            ${data.experience.map(exp => `
+                <div class="experience-item">
+                    <h3>${exp.title}</h3>
+                    <p>${exp.company} • ${exp.date}</p>
+                    <p>${exp.description}</p>
+                </div>
+            `).join('')}
+        `;
+        document.querySelector('.container').appendChild(experienceSection);
 
-        // Populate skills section
-        const skillsList = document.getElementById('skills-list');
-        data.skills.forEach(skill => {
-            const skillElement = document.createElement('span');
-            skillElement.className = 'skill-item';
-            skillElement.textContent = skill;
-            skillsList.appendChild(skillElement);
-        });
+        // Render skills section
+        const skillsSection = document.createElement('section');
+        skillsSection.className = 'card';
+        skillsSection.id = 'skills';
+        skillsSection.innerHTML = `
+            <h2>Skills</h2>
+            <div class="skills-list">
+                ${data.skills.map(skill => `
+                    <div class="skill-item">${skill}</div>
+                `).join('')}
+            </div>
+        `;
+        document.querySelector('.container').appendChild(skillsSection);
 
-        // Populate navigation
-        const navList = document.getElementById('nav-links');
-        data.navLinks.forEach(link => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.href = link.href;
-            a.innerHTML = `
-                <i class="fa-solid ${link.icon}"></i>
-                <span>${link.text}</span>
-            `;
-            if (link.download) a.setAttribute('download', '');
-            li.appendChild(a);
-            navList.appendChild(li);
-        });
-
-        // Populate footer
-        document.getElementById('footer-text').textContent = data.footerText;
+        // Render contact section
+        const contactSection = document.createElement('section');
+        contactSection.className = 'card';
+        contactSection.id = 'contact';
+        contactSection.innerHTML = `
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        `;
+        document.querySelector('.container').appendChild(contactSection);
 
     } catch (error) {
         console.error('Error loading content:', error);
     }
-});
+}
 
-// Handle form submission
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    // Here you would typically send the form data to a server
-    console.log('Form submitted');
-    alert('Thank you for your message. We will get back to you soon!');
-});
+// Call the function when the page loads
+document.addEventListener('DOMContentLoaded', fetchContent);

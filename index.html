@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Profile</title>
+    <title>Ravi Raj</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,36 +13,38 @@
 </head>
 
 <body>
-    <header>
-        <nav id="sidebar">
-            <ul id="nav-links" class="sidebar-nav"></ul>
-        </nav>
-    </header>
+    <div class="container">
+        <section class="hero">
+            <h1>Your Name</h1>
+            <p>Your Role/Tagline</p>
+        </section>
 
-    <section class="hero">
-        <div class="container">
-            <h1 id="name"></h1>
-            <p id="title"></p>
-        </div>
-    </section>
-
-    <main class="container">
-        <section id="about" class="card">
+        <section class="card" id="about">
             <h2>About Me</h2>
-            <p id="about-content"></p>
+            <p>Write a compelling introduction about yourself here.</p>
         </section>
 
-        <section id="experience">
+        <section class="card" id="experience">
             <h2>Experience</h2>
-            <div id="experience-items"></div>
+            <div class="experience-item">
+                <h3>Job Title</h3>
+                <p>Company Name • Date Range</p>
+                <p>Description of your role and achievements</p>
+            </div>
+            <!-- Add more experience items as needed -->
         </section>
 
-        <section id="skills" class="card">
+        <section class="card" id="skills">
             <h2>Skills</h2>
-            <div id="skills-list" class="skills-list"></div>
+            <div class="skills-list">
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <!-- Add more skills as needed -->
+            </div>
         </section>
 
-        <section id="contact" class="card">
+        <section class="card" id="contact">
             <h2>Contact Me</h2>
             <form id="contact-form">
                 <div>
@@ -60,13 +62,16 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
-    </main>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p id="footer-text"></p>
-        </div>
-    </footer>
+    <nav id="sidebar">
+        <ul class="sidebar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <script src="script.js"></script>
 </body>

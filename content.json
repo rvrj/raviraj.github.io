@@ -1,72 +1,20 @@
 {
-  "name": "John Doe",
-  "title": "Full-Stack Developer | UI/UX Enthusiast | Problem Solver",
-  "about": "I'm a passionate full-stack developer with 5 years of experience creating robust and scalable web applications. I love turning complex problems into simple, beautiful, and intuitive designs. When I'm not coding, you'll find me exploring new technologies or contributing to open-source projects.",
+  "name": "Your Name",
+  "tagline": "Your Role/Tagline",
+  "about": "Your about text here...",
   "experience": [
     {
-      "title": "Senior Developer",
-      "company": "Tech Innovators Inc.",
-      "period": "2020 - Present",
-      "responsibilities": [
-        "Led a team of 5 developers in creating a cloud-based project management tool",
-        "Implemented microservices architecture, improving system scalability by 200%",
-        "Mentored junior developers, increasing team productivity by 30%"
-      ]
-    },
-    {
-      "title": "Full-Stack Developer",
-      "company": "Webcraft Solutions",
-      "period": "2018 - 2020",
-      "responsibilities": [
-        "Developed and maintained multiple web applications using React and Node.js",
-        "Optimized database queries, reducing load times by 40%",
-        "Implemented automated testing, decreasing bug reports by 60%"
-      ]
+      "title": "Job Title",
+      "company": "Company Name",
+      "date": "Date Range",
+      "description": "Description of your role and achievements"
     }
+    // Add more experience items as needed
   ],
   "skills": [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Python",
-    "SQL",
-    "MongoDB",
-    "Git",
-    "Docker",
-    "AWS"
-  ],
-  "navLinks": [
-    {
-      "text": "Home",
-      "href": "#hero",
-      "icon": "fa-house"
-    },
-    {
-      "text": "About",
-      "href": "#about",
-      "icon": "fa-user"
-    },
-    {
-      "text": "Experience",
-      "href": "#experience",
-      "icon": "fa-briefcase"
-    },
-    {
-      "text": "Skills",
-      "href": "#skills",
-      "icon": "fa-code"
-    },
-    {
-      "text": "Contact",
-      "href": "#contact",
-      "icon": "fa-envelope"
-    },
-    {
-      "text": "CV",
-      "href": "/path-to-your-cv.pdf",
-      "icon": "fa-file-arrow-down",
-      "download": true
-    }
-  ],
-  "footerText": "© 2023 John Doe. All rights reserved."
+    "HTML",
+    "CSS",
+    "JavaScript"
+    // Add more skills as needed
+  ]
 }
