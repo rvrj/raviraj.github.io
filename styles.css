@@ -24,44 +24,62 @@ body {
     width: 90%;
     max-width: 1400px;
     margin: 0 auto;
+    margin-left: 80px;
     padding: var(--spacing);
 }
 
-header {
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    z-index: 1000;
+    padding: 1rem 0;
 }
 
-nav ul {
+.sidebar-nav {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
     align-items: center;
 }
 
-nav ul li a {
-    color: var(--primary-color);
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
     position: relative;
+    opacity: 0.6;
 }
 
-nav ul li a::after {
+.sidebar-nav li a:hover {
+    opacity: 1;
+}
+
+.sidebar-nav li a.active {
+    opacity: 1;
+    color: var(--secondary-color);
+}
+
+.sidebar-nav li a::before {
     content: '';
     position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
+    left: -10px;
+    width: 3px;
+    height: 0;
     background-color: var(--secondary-color);
-    transition: width 0.3s ease;
+    transition: height 0.3s ease;
 }
 
-nav ul li a:hover::after {
-    width: 100%;
+.sidebar-nav li a.active::before {
+    height: 100%;
 }
 
 .hero {
@@ -179,12 +197,21 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
+    #sidebar {
+        top: 0;
+        transform: none;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
     }
 
-    nav ul li {
-        margin-bottom: 10px;
+    .sidebar-nav {
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .container {
+        margin-left: auto;
     }
 }
