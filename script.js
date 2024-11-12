@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             const li = document.createElement('li');
             const a = document.createElement('a');
             a.href = link.href;
-            a.textContent = link.text;
+            a.innerHTML = `
+                <i class="fa-solid ${link.icon}"></i>
+                <span>${link.text}</span>
+            `;
             if (link.download) a.setAttribute('download', '');
             li.appendChild(a);
             navList.appendChild(li);
