@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #000000;
-    --secondary-color: #FF3D00;
-    --accent-color: #00FF00;
-    --text-color: #ffffff;
-    --bg-color: #1a1a1a;
-    --card-bg: #FFE500;
+    --primary-color: #f7f7f7;
+    --secondary-color: #2a2a2a;
+    --accent-color: #d4d4d4;
+    --text-color: #2a2a2a;
+    --bg-color: #ffffff;
+    --card-bg: #f7f7f7;
     --spacing: clamp(1rem, 3vw, 2rem);
     --sidebar-width: 60px;
-    --border-thickness: 4px;
-    --box-shadow: 5px 5px 0px 0px rgba(255, 255, 255, 1);
+    --border-thickness: 1px;
+    --box-shadow: none;
 }
 
 /* Base Styles */
@@ -55,7 +55,7 @@ h2 {
     width: 100%;
     height: var(--sidebar-width);
     background-color: var(--primary-color);
-    border-top: var(--border-thickness) solid white;
+    border-top: var(--border-thickness) solid var(--secondary-color);
     z-index: 1000;
 }
 
@@ -73,7 +73,7 @@ h2 {
     color: var(--text-color);
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     padding: 0.5rem;
     transition: all 0.2s ease;
 }
@@ -85,47 +85,47 @@ h2 {
 
 /* Hero Section */
 .hero {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: calc(var(--spacing) * 2) var(--spacing);
-    border: var(--border-thickness) solid white;
-    box-shadow: var(--box-shadow);
+    border: none;
+    box-shadow: none;
     margin-bottom: var(--spacing);
 }
 
 .hero h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 800;
+    font-weight: 500;
     line-height: 1.1;
-    text-transform: uppercase;
-    color: white;
-    -webkit-text-stroke: 2px white;
+    text-transform: none;
+    color: var(--secondary-color);
+    -webkit-text-stroke: 0;
 }
 
 .hero p {
     font-size: clamp(1.1rem, 3vw, 1.5rem);
-    font-weight: 600;
-    background-color: var(--primary-color);
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border: var(--border-thickness) solid white;
-    box-shadow: var(--box-shadow);
+    font-weight: 400;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
     color: var(--text-color);
 }
 
 .card {
     background-color: var(--card-bg);
-    color: var(--primary-color);
-    border: var(--border-thickness) solid white;
-    box-shadow: var(--box-shadow);
+    color: var(--text-color);
+    border: none;
+    box-shadow: none;
     padding: calc(var(--spacing) * 1.5);
     margin-bottom: var(--spacing);
-    transition: transform 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .card:hover {
-    transform: translate(-5px, -5px);
-    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    transform: none;
+    box-shadow: none;
+    background-color: var(--accent-color);
 }
 
 .experience-item h3 {
@@ -145,16 +145,17 @@ h2 {
     background-color: var(--primary-color);
     color: var(--text-color);
     padding: 0.8rem 1.5rem;
-    border: var(--border-thickness) solid white;
-    box-shadow: var(--box-shadow);
-    font-weight: 700;
-    text-transform: uppercase;
+    border: var(--border-thickness) solid var(--secondary-color);
+    box-shadow: none;
+    font-weight: 400;
+    text-transform: none;
     transition: transform 0.2s ease;
 }
 
 .skill-item:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 1);
+    transform: none;
+    box-shadow: none;
+    background-color: var(--accent-color);
 }
 
 form {
@@ -166,7 +167,7 @@ input,
 textarea {
     width: 100%;
     padding: 1rem;
-    border: var(--border-thickness) solid white;
+    border: var(--border-thickness) solid var(--secondary-color);
     background-color: var(--primary-color);
     color: var(--text-color);
     font-family: 'Space Grotesk', sans-serif;
@@ -185,18 +186,19 @@ button {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     padding: 1rem 2rem;
-    border: var(--border-thickness) solid white;
-    box-shadow: var(--box-shadow);
+    border: none;
+    box-shadow: none;
     font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
+    font-weight: 400;
+    text-transform: none;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
 button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 1);
+    transform: none;
+    box-shadow: none;
+    opacity: 0.9;
 }
 
 footer {
@@ -216,7 +218,7 @@ footer {
         top: 0;
         height: 100vh;
         border-top: none;
-        border-right: var(--border-thickness) solid white;
+        border-right: var(--border-thickness) solid var(--secondary-color);
     }
 
     .sidebar-nav {
@@ -236,9 +238,9 @@ footer {
 
     .sidebar-nav li a:hover,
     .sidebar-nav li a.active {
-        border-color: white;
+        border-color: var(--secondary-color);
         background-color: var(--accent-color);
-        color: var(--primary-color);
+        color: var(--text-color);
     }
 
     .container {
